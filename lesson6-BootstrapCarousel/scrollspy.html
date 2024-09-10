@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrollspy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            position: relative;
+            padding-top: 70px;
+            /* Add padding to prevent overlap */
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #section1 {
+            padding-top: 50px;
+            height: 300px;
+            color: white;
+            background-color: orange;
+        }
+
+        #section2 {
+            padding-top: 50px;
+            height: 300px;
+            color: green;
+            background-color: yellow;
+        }
+
+        #section3 {
+            padding-top: 50px;
+            height: 300px;
+            color: lightgreen;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- navbar-> for basic navbar styling -->
+    <!-- navbar-dark -> ensures that the text color is light -->
+    <!-- bg-dark -> to apply dark background color to navbar -->
+    <!-- fixed-top -> fixes the navbar to the top even if we scroll -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- container-fluid -> for 100% width -->
+            <div class="navbar-header">
+                <!-- navbar-header -> makes easier to view in mobile consists of logo generally -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                    <!-- navbar-toggler -> to open and close nav bar -->
+                    <!-- data-collapse -> starts the collapse functionality -->
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- navbar-toggler-icon -> displays the icon(3 lines inside of a button) -->
+                </button>
+                <a class="navbar-brand" href="#">Codingal</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <!-- collapse navbar-collapse-> changes screen size accordingly -->
+                    <ul class="navbar-nav">
+                        <!-- navbar-nav -> used to style the list of navigation links-->
+                        <li class="nav-item"><a class="nav-link" href="#section1">Section 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section2">Section 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section3">Section 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="section1" class="container-fluid">
+        <h1>Section 1</h1>
+        <h3>Codingal</h3>
+        <h5>Coding is proven to develop creativity, logical thinking, and problem-solving skills in kids.</h5>
+        <p>Scroll this section.</p>
+    </div>
+    <div id="section2" class="container-fluid">
+        <h1>Section 2</h1>
+        <h3>Codingal</h3>
+        <h5>Vivek Prakash and Satyam Baranwal are the founders of Codingal.</h5>
+        <p>Scroll this section.</p>
+    </div>
+    <div id="section3" class="container-fluid">
+        <h1>Section 3</h1>
+        <h3>Codingal</h3>
+        <h5>Vivek Prakash and Satyam Baranwal are the founders of Codingal.</h5>
+        <p>Scroll this section.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
